@@ -11,15 +11,19 @@ int main()
     printf("vvedite 3 naturalnyh chisla : ");
     scanf("%llu %llu %llu", &numb1, &numb2, &numb3);
 
-    for(k = 2; k < fmin(numb1, fmin(numb2, numb3)); ++k)
-    sqrt(k);
-    for(unsigned long long i = 2; i < sqrt(k); ++i)
-    {
-        printf("NOK : %llu\n", i);
-        break;
-    }
-    printf("oshibka..\n");
+    unsigned long long min_1 = fmin(numb2, numb3);
+    unsigned long long min_2 = fmin(numb1, min_1);
 
+    for(k = 2; k < sqrt(min_2); ++k)
+    {
+        unsigned long long NOD = (sqrt(min_2));
+        if(NOD % k == 0){
+        printf("NOD : %llu\n", NOD);
+        break;
+        }
+        if(NOD <= 2)
+        printf("oshibka..\n");
+    }
     return 0;
 }
 
