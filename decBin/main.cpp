@@ -2,9 +2,10 @@
 #include<stdio.h>
 
 int main() {
+    printf("desyatichnoe predstavlenie chisla: ");
     int num;
-    printf("vvedite chislo: ");
     scanf("%d", &num);
+
 
     decToBin(num);
 
